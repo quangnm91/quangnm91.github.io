@@ -20,13 +20,9 @@
 </head>
 
 <body class="login-page" style="min-height: 452.391px;">
-    @if(Session::has('message'))
-    <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
-    @endif
     <div class="login-box">
         <div class="login-logo">
             <a href="http://quangnm.me/home">
-                <img src="http://quangnm.me/vendor/adminlte/dist/img/AdminLTELogo.png" alt="Admin Logo" height="50">
                 <b>eProduce</b>
             </a>
         </div>
