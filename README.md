@@ -1,1 +1,90 @@
-# quangnm91.github.io
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="TCKvZa1mHtKQwbMZAnWZzYP1RHeDE5qyMQxb8J2l">
+
+    <title>
+        Request to delete account from eProduce </title>
+    <link rel="stylesheet" href="http://quangnm.me/vendor/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="http://quangnm.me/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="http://quangnm.me/vendor/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="http://quangnm.me/vendor/adminlte/dist/css/adminlte.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+
+<body class="login-page" style="min-height: 452.391px;">
+    @if(Session::has('message'))
+    <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+    @endif
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="http://quangnm.me/home">
+                <img src="http://quangnm.me/vendor/adminlte/dist/img/AdminLTELogo.png" alt="Admin Logo" height="50">
+                <b>eProduce</b>
+            </a>
+        </div>
+
+        <div class="card card-outline card-primary">
+            <div class="card-header ">
+                <h3 class="card-title float-none text-center">
+                    Please enter your username and password to request delete your account from eProduce - Quang Nguyen Minh </h3>
+            </div>
+
+            <div class="card-body login-card-body ">
+                <form action="{{ route('destroy-account') }}" method="post">
+                    @csrf
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control " value="" placeholder="Email" autofocus="">
+
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope "></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <input type="password" name="password" class="form-control " placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock "></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <button type="submit" class="btn btn-block btn-flat btn-primary">
+                                <span class="fas fa-sign-in-alt"></span>
+                                Delete my account
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card-footer ">
+                <div class="w3-panel w3-red">
+                    <p>All of your information saved in eProduce's database will be deleted</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="http://quangnm.me/vendor/jquery/jquery.min.js"></script>
+    <script src="http://quangnm.me/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="http://quangnm.me/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="http://quangnm.me/vendor/adminlte/dist/js/adminlte.min.js"></script>
+</body>
+
+</html>
